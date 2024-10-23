@@ -1,0 +1,119 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="images/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=PT+Serif&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/85664424c0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <link rel="stylesheet" href="css/main.css" >
+        <title>
+            SparePark
+        </title>
+    </head>
+    
+    <body onload="updateTime();">
+        <div class="head-container">
+            <div><a href="home.html"><img alt="SparePark logo" style ="width:280px; height:50px" src="images/logo.png"></a>
+             </div>
+    
+            
+           
+            <div><a style="font-family: PT Serif, serif;" class="navlink" href="about.html"><i class="fa-solid fa-building"></i> About us</a></div>
+            <div><a style="font-family: PT Serif, serif" class="navlink" href="signin.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></div>
+            <div><a style="font-family: PT Serif, serif"  class="navlink" href="register.php"><i class="fa-solid fa-user"></i> Sign up</a></div>
+            <div><a class="navlinkrent" href="">Rent out your space</a></div>
+</div>
+        
+        <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Space')"  id="defaultOpen">For Space-Owners</button>
+  <button class="tablinks" onclick="openCity(event, 'Driver')">For Drivers</button>
+  <button class="tablinks" onclick="openCity(event, 'EV')">EV Charging</button>
+</div>
+        <div style="height: 40px"></div>
+<div id="Space" class="tabcontent">
+  <div class="product">
+         <div>
+            <img src="images/cp.png" style="width:500px; height: 200px; border-radius: 10px; ">
+            </div>
+            <div style="width: 550px; height: 250px; text-align: center; font-style: italic; font-weight: bold; ">
+           We offer parking lot owners a platform to manage their parking spaces, including setting prices, monitoring occupancy, and tracking revenue.
+            </div><br>
+           
+        </div>
+
+</div>
+
+<div id="Driver" class="tabcontent">
+   <div class="product">
+         <div>
+            <img src="images/ppp.png" style="width:500px; height: 200px; border-radius: 10px; ">
+            </div>
+            <div style="width: 550px; height: 250px; text-align: center; font-style: italic; font-weight: bold; ">
+            At SparePark we offer the best parking solution for you and your business.We allow users to search and book parking spots in advance for a specified date and time. Users can view the availability of parking spots and choose the one that suits their requirements.
+            </div><br>
+           
+        </div> 
+</div>
+
+<div id="EV" class="tabcontent">
+    
+         <div class="product">
+         <div>
+            <img src="images/ev.png" style="width:500px; height: 200px; border-radius: 10px; ">
+            </div>
+            <div style="width: 550px; height: 250px; text-align: center; font-style: italic; font-weight: bold; ">
+         Find a charger nearby, reserve it for when you need it, and then you can unwind knowing that you'll always have an EV charger available.
+            </div><br>
+           
+        </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+     document.getElementById("defaultOpen").click();
+</script>
+        
+        
+     
+     
+        <div style="height: 50px"></div> 
+        
+        <div class="privacy">
+            <div>
+                
+                
+                <p style="color: white"> Social Media</p>
+            
+                    <img src="images/tw.png" style="width: 30px; height: 30px">
+                    <img src="images/lk.png" style="width: 30px; height: 30px">
+                    <img src="images/fb.png" style="width: 30px; height: 30px">
+            
+               
+            </div>
+            <div> 
+                    <a class="p" href="privacy.html">Privacy Policy</a>
+                    <a class ="p" href="terms.html">Terms and conditions</a>
+                <a class="p" href="contact.html">Contact us</a>
+                <div style="text-align: center"><img style="width: 250px; height: 50px" src="images/3logo.png"></div>
+                
+            </div>
+            <div>
+                <a href=""> <img  src="images/google.png" style="width: 150px; height: 50px"></a>
+            </div>
+        </div>  
+    </body>
+</html>

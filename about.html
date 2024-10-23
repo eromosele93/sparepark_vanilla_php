@@ -1,0 +1,126 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="images/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=PT+Serif&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/85664424c0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <link rel="stylesheet" href="css/main.css" >
+        <title>
+            SparePark
+        </title>
+    </head>
+    
+    <body style="background-color: #F5F5F5">
+        <div class="head-container">
+            <div><a href="home.html"><img alt="SparePark logo" style ="width:280px; height:50px" src="images/logo.png"></a>
+             </div>
+    
+            <div><a style="font-family: PT Serif, serif;" class="navlink" href="home.html"><i class="fa-solid fa-house"></i> Home</a></div>
+            
+            <div><a style="font-family: PT Serif, serif;" class="navlink" href="products.html"><i class="fa-solid fa-network-wired"></i>Products</a></div>
+           
+            <div><a style="font-family: PT Serif, serif" class="navlink" href="signin.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></div>
+            <div><a style="font-family: PT Serif, serif"  class="navlink" href="register.php"><i class="fa-solid fa-user"></i> Sign up</a></div>
+            <div><a class="navlinkrent" href="">Rent out your space</a></div>
+</div>
+        
+        <div class="about">
+         <div>
+            <img src="images/cargirl.jpg" style="width:500px; height: 450px; border-radius: 10px; ">
+            </div>
+            <div style="width: 550px; height: 450px; text-align: center; font-style: italic; font-weight: bold; ">
+            "As a driver we help you locate the best available parking spot and allow you to reserve and pay for a parking spot in advance, so you don't have to worry about finding a spot when you arrive. <br> As a home owner, we give you a platform to advertise your parking space so that our registered drivers can book and pay for your services."<br>
+                Sound so good? 
+            </div><br>
+           
+        </div>
+        <div class="about2">
+         <div>
+                <table>
+                    <tr><td><img src="images/vision.png" style="width: 350px ; height: 200px; border-radius: 10px"></td>
+                        
+                    </tr>
+                    <tr><td style="color: #46E14E"><b>Our Vision</b></td></tr>          
+                    <tr><td>Our vision is to become the leading online platform for parking solutions, connecting drivers with parking facilities across the globe. We strive to continuously innovate and improve our services, offering our customers a seamless and stress-free parking experience. We aspire to create a sustainable future where parking is no longer a burden, but a seamless part of our daily lives.</td>
+                       
+                    </tr>
+                </table>
+            </div>
+             <div>
+                <table>
+                    <tr><td><img src="images/mission.png" style="width: 350px ; height: 200px; border-radius: 10px"></td>
+                       
+                    </tr>
+                    <tr><td style="color: #46E14E"><b>Our Mission</b></td></tr> 
+                    <tr><td>Our mission is to simplify the parking experience for our customers by providing them with easy access to reliable and affordable parking options through our user-friendly website. We aim to make parking hassle-free and convenient, while also reducing the environmental impact of parking on our communities.</td>
+                       
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        
+       <div style="margin-left: 10px; margin-top: 20px; color:#46E14E ; text-align: center; font-size: 20px; margin-bottom: 10px ">Frequently Asked Questions</div>
+        
+        <button class="accordion"><b>Can I use my account for Renting out and booking a parking space</b></button>
+<div class="panel">
+  <p>Yes, once you register you will have both privileges to rent and also book a parking space when needed</p>
+</div>
+
+        <button class="accordion"><b>Can I list out more than one parking space</b></button>
+<div class="panel">
+  <p>Yes You can list more than one parking space you own upon validation</p>
+</div>
+
+        <button class="accordion"><b>How can I confirm my booking</b></button>
+<div class="panel">
+  <p >An email will be sent to you and the space owner with the details of the boking and contact</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script> 
+        
+        
+        <div class="privacy">
+            <div>
+                
+                
+                <p style="color: white"> Social Media</p>
+            
+                    <img src="images/tw.png" style="width: 30px; height: 30px">
+                    <img src="images/lk.png" style="width: 30px; height: 30px">
+                    <img src="images/fb.png" style="width: 30px; height: 30px">
+            
+               
+            </div>
+            <div> 
+                    <a class="p" href="privacy.html">Privacy Policy</a>
+                    <a class ="p" href="terms.html">Terms and conditions</a>
+                <a class="p" href="contact.html">Contact us</a>
+                <div style="text-align: center"><img style="width: 250px; height: 50px" src="images/3logo.png"></div>
+                
+            </div>
+            <div>
+                <a href=""> <img  src="images/google.png" style="width: 150px; height: 50px"></a>
+            </div>
+        </div>
+    </body>
+    
+</html>

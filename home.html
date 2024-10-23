@@ -1,0 +1,282 @@
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="images/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=PT+Serif&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/85664424c0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <link rel="stylesheet" href="css/main.css">
+        <title>
+            SparePark
+        </title>
+    </head>
+    
+    <body onload="updateTime();">
+        <!--Navigation Bar Starts -->
+        <div class="head-container">
+            
+            <div><a href="home.html"><img alt="SparePark logo" style ="width:280px; height:50px" src="images/logo.png"></a>
+             </div>
+    
+             <div><a style="font-family: PT Serif, serif;" class="navlink" href="products.html"><i class="fa-solid fa-network-wired"></i>Products</a></div> 
+            <div><a style="font-family: PT Serif, serif;" class="navlink" href="about.html"><i class="fa-solid fa-building"></i> About us</a></div>
+            <div><a style="font-family: PT Serif, serif" class="navlink" href="signin.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></div>
+            <div><a style="font-family: PT Serif, serif"  class="navlink" href="register.php"><i class="fa-solid fa-user"></i> Sign up</a></div>
+            <div><a class="navlinkrent" href="">Rent out your space</a></div>
+</div>
+        <!--Navigation Bar Ends-->
+        <div>
+           
+           
+        </div>
+        <!--Welcome Message-->
+        <div class="message">
+            <div style="flex-grow: 1; font-size:20px; color: black" class="display-message"><i>
+                 Welcome to sparepark. We're so excited to have you here; giving you seamless experience is our ultimate priority.</i>
+            </div>
+            <div style="flex-grow: 6">
+                
+            </div>
+            <!--Date and Time-->
+            <div style="flex-grow: 1">
+                
+              <span class="display-time" id="time"></span>
+
+<script>
+var dt = new Date();
+document.getElementById("time").innerHTML = dt.toLocaleTimeString();
+</script><br>
+                <span class="display-time" id="date" ></span>
+
+<script>
+var dt = new Date();
+document.getElementById("date").innerHTML = dt.toLocaleDateString();
+</script>
+                   
+            </div>
+        </div>
+        
+<!--Welcome Message Ends-->
+
+
+<!--Search area for users and map-->
+        <div class="body-container">
+            
+        <div style="flex-grow: 2; width: 50px; border: 1px solid #46E14E; border-radius: 10px" >
+            <p style=" font-family:sans-serif; font-size: 18px; color: black "><b>Find and book parking space within a minute</b> </p>
+            <!-- Google Maps -->
+    <div id="google-map" style="width:250px; height:150px;">
+    </div>
+    <script>
+        
+        let map;
+        async function initMap() {
+            //@ts-ignore
+            const { Map } = await google.maps.importLibrary("maps");
+
+            map = new Map(document.getElementById("google-map"), {
+                center: { lat: 51.5612, lng:  0.0835 },
+                zoom: 8,
+            });
+        }
+
+        initMap();
+    </script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHfx2CYJYVM00pn_GUTcIDMfGIpWztRWY&callback=initMap"></script>
+            <form style="margin-top: 20px" method="post" action="search.php">
+                <input style="border: 2px solid #46E14E; border-radius: 10px; width: 250px; height: 40px; " type="text" placeholder="Search by postcode" name="scode" required><br><p></p>
+                <input style="background-color: #46E14E; color: white; border: none;padding: 10px 10px;cursor: pointer; width: 250px; height: 40px; border-radius: 10px" type="submit" value="show parking spaces">
+            </form>
+             
+
+            </div>
+            <div style="flex-grow: 3;  width: 250px" >
+                <!--End of search area and map-->
+                
+                <!--Slide Show starts-->
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img alt="Woman in her car" src="images/going.png" style="width:100%; height: 300px; border-radius: 5px">
+  <div style="border: 1px solid #46E14E; background-color: #46E14E; color: white;" class="text">Going out for an event or shopping and looking for a suitable car park that is affordable? <a href="" style="color: black">Get Started</a></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img alt="Man Standing next to car" src="images/space.jpg" style="width:100%; height: 300px; border-radius: 5px">
+  <div class="text" style="border: 1px solid #46E14E; background-color: #46E14E; color: white;">Are you a home owner willing to let out your parking space for a fee and make cool cash? <a href="" style="color: black">Get Started</a></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img alt="Shaking hands" src="images/hands.png" style="width:100%;height: 300px; border-radius: 5px">
+    <div class="text" style="border: 1px solid #46E14E; background-color: #46E14E; color: white;">At sparepark we connect drivers with car space owners for the mutual benefit of both parties <a href="about.html" style="color: black">Learn more</a></div>
+</div>
+               
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 6000); // Change image every 6 seconds
+}
+</script>
+            </div>
+            <!--Slide show ends-->
+            
+            <!--Sponsored Ads -->
+        <div style="flex-grow: 2; width: 70px; border: 1px solid #46E14E; border-radius: 10px">
+            <div style="text-align: center; font-weight: bold">Sponsored Ads</div>
+                <table class="tableadd">
+                    <tr><td>
+                        <a href="">
+               <img style="border-radius: 20px; " src="images/3d.jpg" alt="Car Parked with EV charging" width="150" 
+                    height="100" ></a></td>
+                        <td><a href = ""><b>Looking for extra cash?</b><br>Rent out your EV charging space and make tax free money.</a>
+                        </td>
+                    </tr>
+                     <tr><td>
+               <a href=""><img style="border-radius: 20px;" src="images/car.jpg" alt="Black Car" width="150" 
+                               height="100"  ></a></td>
+                         <td><a href=""><b>Buy, Swap or Sell</b><br>Visit us to trade or sell your used vehicle. Click to learn more.
+                             </a></td>
+                    </tr>
+                     <tr><td>
+             <a href="">  <img style="border-radius: 20px;" src="images/room.jpg" alt="A decorated room" width="150" 
+                               height="100"  ></a></td>
+                         <td><a href=""><b>Transform your experience.</b><br> We at intereior Deco will help give your apartment a new look
+                             </a></td>
+                    </tr>
+                </table>
+            </div >
+        
+          
+        </div>
+        
+        
+        <!--Driver Scenario-->
+        <div style="margin-top: 80px" class="scenario">
+              
+              <div>
+                  <table>
+                      <tr><td><img alt="Animated car park" style="width: 300px; height: 150px; border-radius: 10px" src="images/choose.png"></td></tr>
+                      <tr><td style="text-align: center; color: #46E14E; text-decoration: underline">Choose from thousand of parking spaces across the UK</td></tr>
+                  </table>
+              </div>
+              
+              <div>
+                  <table>
+                      <tr><td><img alt="Animated people" style="width: 300px; height: 150px; border-radius: 10px" src="images/sear.png"></td></tr>
+                      <tr><td style="text-align: center; color: #46E14E; text-decoration: underline">Search and book</td></tr>
+                  </table>
+              </div>
+              <div>
+                  <table>
+                      <tr><td><img alt="Girl and parked car" style="width: 300px; height: 150px; border-radius: 10px" src="images/confi.png"></td></tr>
+                      <tr><td style="text-align: center; color: #46E14E; text-decoration: underline">Park with confidence</td></tr>
+                  </table>
+              </div>
+              
+            </div>
+            
+            
+        <!--Users Review-->
+        <div style="margin-top: 60px; text-align: center; color: black; height: 20px; font-size : 22px; text-decoration: underline; text-decoration-color: #46E14E "><i>What our users are saying about us.</i></div>
+        <div class="reviews">
+            <div>
+                <table>
+                    <tr>
+                    <td style="color: black">"I'm an out going person and always on the move, I can conviniently book parking spaces around my city with no stress. Very convinient and seamless."</td>
+                    </tr>
+                     <tr>
+                    <td  style="text-align: center; color:#46E14E ">Ava Thomas.</td>
+                    </tr>
+                     <tr>
+                    <td style="text-align: center"><img alt="smiling girl" style="width: 150px; height: 100px; border-radius: 5px" src="images/ava.png"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><img alt="five star rating" style="width: 150px; " src="images/5%20star.png"></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+            <table>
+                    <tr>
+                    <td style="color: black">"Sparepark has been a revelation for me. I own a car space which I rent out but I also book car spaces when I go out with the same user account. It is so satisfying."</td>
+                    </tr>
+                     <tr>
+                    <td style="text-align: center; color:#46E14E">Bethany Wrights</td>
+                    </tr>
+                     <tr>
+                    <td style="text-align: center"><img alt="smiling girl" src="images/beth.png" style="width: 150px; height: 100px; border-radius: 10px;"></td>
+                    </tr>
+                <tr><td style="text-align: center"><img alt="five star rating"  src="images/5%20star.png " style="width: 150px"></td></tr>
+                </table></div>
+            <div>
+            <table>
+                    <tr>
+                    <td style="color: black">"I'm a home owner entitled to 2 parking spaces, I currently have just one car and I rent out the other. My car space is always booked and I make about 200pounds a week. Easy money." </td>
+                    </tr>
+                     <tr>
+                    <td  style="text-align: center; color:#46E14E">Matthew Philips</td>
+                    </tr>
+                     <tr>
+                    <td style="text-align: center"><img alt="smiling man" src="images/carl.png" style="width: 150px; height: 100px; border-radius: 10px"></td>
+                    </tr>
+                <tr><td  style="text-align: center"><img alt="five star rating" src="images/5%20star.png" style="width: 150px"></td></tr>
+                </table></div>
+            
+            
+        </div>
+        
+        <!--Footer-->
+        
+        <div class="privacy">
+            <div>
+                
+                
+                <p style="color: white"> Social Media</p>
+            
+                    <img alt="Twitter logo" src="images/tw.png" style="width: 30px; height: 30px">
+                    <img alt="Linkedin logo" src="images/lk.png" style="width: 30px; height: 30px">
+                    <img alt="Facebook logo" src="images/fb.png" style="width: 30px; height: 30px">
+            
+               
+            </div>
+            <div> 
+                    <a class="p" href="privacy.html">Privacy Policy</a>
+                    <a class ="p" href="terms.html">Terms and conditions</a>
+                <a class="p" href="contact.html">Contact us</a>
+                <div style="text-align: center"><img alt="SparePark Logo with different Variation" style="width: 250px; height: 50px" src="images/3logo.png"></div>
+                
+            </div>
+            <div>
+                <a href=""> <img alt="Google play logo"  src="images/google.png" style="width: 150px; height: 50px"></a>
+            </div>
+        </div>
+    </body>
+</html>
